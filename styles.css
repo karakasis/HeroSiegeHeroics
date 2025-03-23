@@ -1,52 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  margin: 20px;
 }
 
-main {
-    padding: 20px;
+#filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
 }
 
-#item-categories {
-    display: flex;
-    flex-wrap: wrap;
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
 }
 
-.category {
-    width: 100%;
-    padding: 10px;
-    background-color: #fff;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+button:hover {
+  background-color: #ddd;
 }
 
-.category h2 {
-    font-size: 1.5em;
+#items-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.item {
-    margin-top: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+.item-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  text-align: left;
+  background-color: #fff;
 }
 
-.item h3 {
-    font-size: 1.2em;
-    margin: 0;
+.item-card h3 {
+  margin-top: 0;
 }
 
-.item p {
-    margin: 5px 0;
+.item-card p {
+  margin: 5px 0;
 }
