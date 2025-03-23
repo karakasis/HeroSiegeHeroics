@@ -1,54 +1,352 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.filters-column {
+  width: 280px;
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-right: 1px solid #3d3d3d;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-column {
+  flex: 1;
+  padding: 20px 20px 20px 40px;
+  margin-left: 300px;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 600;
   text-align: center;
 }
 
-header {
-  margin: 20px;
+h2 {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-align: center;
 }
 
-#filter-buttons {
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+  color: #b0b0b0;
+}
+
+.filter-container {
+  margin: 30px 0;
+  padding: 12px;
+  background-color: #252525;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: 1px solid #3d3d3d;
+  width: calc(100% - 24px);
+}
+
+.filter-container h3 {
+  margin: 0 0 12px 0;
+  font-size: 1em;
+  color: #b0b0b0;
+  text-align: left;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+/* Add extra spacing between zones and bosses */
+#location-buttons.filter-container {
+  margin-top: 40px;
+  position: relative;
+}
+
+/* Add decorative divider between zones and bosses */
+#location-buttons.filter-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3d3d3d, transparent);
+}
+
+/* Add extra spacing between acts and zones */
+#zone-buttons.filter-container {
+  margin-top: 40px;
+}
+
+.special-zones {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #3d3d3d;
+}
+
+/* Remove the special zones heading */
+.special-zones h3 {
+  display: none;
+}
+
+.button-group {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 20px;
+  justify-content: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.button-group button {
+  flex: 0 0 calc(50% - 2px);
+  margin: 0;
+  padding: 4px 6px;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  height: 24px;
+  line-height: 1;
+}
+
+/* Style for special zone buttons */
+.special-zones-group button {
+  background-color: #2d2d2d;
+  border-color: #4d4d4d;
+  color: #a0a0a0;
+}
+
+.special-zones-group button:hover {
+  background-color: #3d3d3d;
+  border-color: #5d5d5d;
+}
+
+.special-zones-group button.active {
+  background-color: #8b0000; /* Dark red */
+  border-color: #a00000; /* Slightly lighter red */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.special-zones-group button.active:hover {
+  background-color: #a00000; /* Lighter red on hover */
+}
+
+/* Remove old button group styles */
+#act-buttons, #location-buttons, #zone-buttons {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+/* Center the no items message */
+.no-items-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 1.2em;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #252525;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: 1px solid #3d3d3d;
+  z-index: 1001;
+}
+
+/* Style for the clear filters button container */
+#clear-filters {
+  margin-top: auto; /* Push to bottom */
+  margin-bottom: 40px; /* Increased bottom margin */
+  width: calc(100% - 30px);
+  padding: 8px 16px;
+  font-size: 13px;
+  white-space: normal;
+  min-width: 0;
+  height: auto;
+  background-color: #8b0000; /* Dark red */
+  color: #e0e0e0;
+  border: 1px solid #a00000; /* Slightly lighter red */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#clear-filters:hover {
+  background-color: #a00000; /* Lighter red on hover */
+  border-color: #b00000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 button {
-  margin: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin: 3px;
+  padding: 6px 12px;
+  font-size: 12px;
   cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f0f0f0;
+  background-color: #3d3d3d;
+  color: #e0e0e0;
+  border: 1px solid #4d4d4d;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  min-width: 80px;
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: #4d4d4d;
+  transform: translateY(-1px);
+  border-color: #5d5d5d;
+}
+
+button.active {
+  background-color: #0d47a1;
+  border-color: #1565c0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+button.active:hover {
+  background-color: #1565c0;
+}
+
+button:disabled {
+  background-color: #2d2d2d;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #3d3d3d;
+  opacity: 0.7;
+}
+
+button:disabled:hover {
+  transform: none;
+  background-color: #2d2d2d;
+  border-color: #3d3d3d;
 }
 
 #items-container {
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  position: relative;
+  align-content: start;
+  min-height: 0;
+  margin-left: 20px;
 }
 
 .item-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #3d3d3d;
   padding: 15px;
-  margin: 10px;
-  width: 250px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   text-align: left;
-  background-color: #fff;
+  position: relative;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.item-card:hover {
+  border-color: #4d4d4d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
 .item-card h3 {
-  margin-top: 0;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
-.item-card p {
-  margin: 5px 0;
+.item-card .category {
+  color: #b0b0b0;
+  font-size: 0.9em;
+  margin-bottom: auto;
+}
+
+.item-card .drop-chance {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5d5d5d;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .filters-column {
+    width: 100%;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #3d3d3d;
+  }
+
+  .content-column {
+    margin-left: 0;
+  }
 }

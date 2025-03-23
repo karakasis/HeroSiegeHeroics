@@ -7,21 +7,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Item Drop List</h1>
-    <p>Select Act or Location to filter items</p>
-  </header>
+  <div class="container">
+    <!-- Left column for filters -->
+    <div class="filters-column">
+      <h2>Filters</h2>
+      <div id="act-buttons" class="filter-container">
+        <h3>Acts</h3>
+        <div class="button-group"></div>
+      </div>
+      <div id="zone-buttons" class="filter-container">
+        <h3>Zones</h3>
+        <div class="button-group regular-zones"></div>
+        <div class="special-zones">
+          <h3>Special Zones</h3>
+          <div class="button-group special-zones-group"></div>
+        </div>
+      </div>
+      <div id="location-buttons" class="filter-container">
+        <h3>Bosses</h3>
+        <div class="button-group"></div>
+      </div>
+      <button id="clear-filters">Clear All Filters</button>
+    </div>
 
-  <!-- Buttons for Act and Location Filters -->
-  <section id="filter-buttons">
-    <div id="act-buttons"></div>
-    <div id="location-buttons"></div>
-  </section>
+    <!-- Right column for items -->
+    <div class="content-column">
+      <h1>Items</h1>
+      <div id="items-container">
+        <!-- Filtered items will be displayed here -->
+      </div>
+    </div>
+  </div>
 
-  <!-- Container for displaying filtered items -->
-  <section id="items-container"></section>
-
-  <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
