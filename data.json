@@ -1,0 +1,590 @@
+[
+  {
+    "Item Name": "Astral Projector",
+    "Locations": ["Act VII Zone 1", "Act VII Zone 2", "Act VII Zone 3", "Act VII Dungeons", "Act VII Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:152,550"
+  },
+  {
+    "Item Name": "Hypothermia",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5", "Act II Dungeons", "Act II Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:96,666"
+  },
+  {
+    "Item Name": "Clafaxier's Legacy",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5", "Act II Dungeons", "Act II Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:110,000"
+  },
+  {
+    "Item Name": "Crackling Thunder",
+    "Locations": ["Possessed Luna"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Arrow of Niflheim",
+    "Locations": ["Possessed Luna"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Recurring Corrosion",
+    "Locations": ["Act VI Zone 1", "Act VI Zone 2", "Act VI Zone 3", "Act VI Dungeons", "Act VI Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:152,550"
+  },
+  {
+    "Item Name": "Dreadnought",
+    "Locations": ["Act V Zone 4", "Act V Zone 5", "Act V Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:587,120"
+  },
+  {
+    "Item Name": "Beacon of Shadows",
+    "Locations": ["Uber Reaper"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Pagan God's Blasphemy",
+    "Locations": ["Act IV Dungeons", "Act IV Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:98,750"
+  },
+  {
+    "Item Name": "Monsoon",
+    "Locations": ["Act IV Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:166,752"
+  },
+  {
+    "Item Name": "Deathquill",
+    "Locations": ["Act IV Zone 1", "Act IV Zone 2", "Act IV Zone 3", "Act V Zone 2", "Act V Zone 3"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:116,752"
+  },
+  {
+    "Item Name": "AK-47",
+    "Locations": ["Act V Zone 2", "Act V Zone 3", "Act V Zone 4", "Act V Zone 5", "Act V Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:127,120"
+  },
+  {
+    "Item Name": "Bonetti's Rapier",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:96,155"
+  },
+  {
+    "Item Name": "The Eye of Tarethiel",
+    "Locations": ["Act II Dungeons", "Act II Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:68,750"
+  },
+  {
+    "Item Name": "Arachno Phobia",
+    "Locations": ["Act IV Zone 7", "Act IV Zone 3"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:296,752"
+  },
+  {
+    "Item Name": "Shadowfury",
+    "Locations": ["Uber Reaper"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Manafunneler's Conjurer",
+    "Locations": ["Possessed Luna"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Oculus of Ages",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5", "Act II Dungeons", "Act II Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:114,626"
+  },
+  {
+    "Item Name": "Blood of Abaddon",
+    "Locations": ["Act VI Overworld", "Act VI Dungeons", "Act VI Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:96,750"
+  },
+  {
+    "Item Name": "Grimbone's Scythe",
+    "Locations": ["Grimbone"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "Grimbone"
+  },
+  {
+    "Item Name": "Serpent's Tooth",
+    "Locations": ["Act IV Zone 2", "Act IV Zone 3"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:96,625"
+  },
+  {
+    "Item Name": "Scarred Battle Darts",
+    "Locations": ["Act I Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:82,425"
+  },
+  {
+    "Item Name": "Sidewinder",
+    "Locations": ["Act III Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:92,425"
+  },
+  {
+    "Item Name": "Shadow Carver",
+    "Locations": ["Uber Reaper"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": ""
+  },
+  {
+    "Item Name": "Arch Angel's Phase Blade",
+    "Locations": ["Act VI Zone 1", "Act VI Zone 2"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:1,116,155"
+  },
+  {
+    "Item Name": "Glowstick Estoc",
+    "Locations": ["Act VII Zone 1", "Act VII Zone 2", "Act VII Zone 3"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:196,155"
+  },
+  {
+    "Item Name": "Spell Eater",
+    "Locations": ["Act IV Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:84,855"
+  },
+  {
+    "Item Name": "Brimskull Trident",
+    "Locations": ["Act II Zone 2", "Act II Zone 5"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:933,720"
+  },
+  {
+    "Item Name": "Glacier Talons",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:287,220"
+  },
+  {
+    "Item Name": "Sowyer's Javelin of Devastation",
+    "Locations": ["Act V Zone 2", "Act V Zone 3"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:96,625"
+  },
+  {
+    "Item Name": "Diablo",
+    "Locations": ["Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:116,750"
+  },
+  {
+    "Item Name": "Riftmaster's Dirge",
+    "Locations": ["Act VII Zone 1", "Act VII Zone 4"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:576,425"
+  },
+  {
+    "Item Name": "Headsman’s Bloodthirster",
+    "Locations": ["Possessed Luna"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Ukko’s Revenge",
+    "Locations": ["Act VIII Overworld", "Act VIII Boss Dungeons"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:418,455"
+  },
+  {
+    "Item Name": "Book of Cold Death",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:246,755"
+  },
+  {
+    "Item Name": "Night’s End",
+    "Locations": ["Act VII Zone 3", "Act VII Zone 4"],
+    "Item Category": "Weapons",
+    "Image": "",
+    "Drop Chance": "9.75:524,133"
+  },
+  {
+    "Item Name": "Candy Shredder",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:2,116,750",
+    "Locations": ["Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Dark Knight's Lance",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:93,720",
+    "Locations": ["Act I Zone 4", "Act I Zone 5", "Act V Zone 2", "Act V Zone 3"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Wraith Forged Cleaver",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:86,850",
+    "Locations": ["Act VIII Zone 4", "Act VIII Zone 5", "Act VIII Boss Dungeon"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Winter's Bite",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:76,850",
+    "Locations": ["Act II Dungeons", "Act II Boss Dungeon"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Gem King's Cleaver",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:882,500",
+    "Locations": ["Act I Zone 1", "Act I Zone 2", "Act I Zone 3", "Act I Zone 4", "Act I Zone 5"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Shishkebab",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:489,120",
+    "Locations": ["Act III Zone 1", "Act III Zone 2", "Act III Zone 3", "Act III Zone 4", "Act III Zone 5"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Luci's Day",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:1,287,220",
+    "Locations": ["Act I Zone 4", "Act I Zone 5", "Act IV Zone 1", "Act IV Zone 2"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Rakhul's Legion Crusher",
+    "Item Category": "Weapons",
+    "Drop Chance": "N/A",
+    "Locations": ["King Rakhul"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Sähköpuimuri",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:489,120",
+    "Locations": ["Act V Zone 1", "Act V Zone 2", "Act V Zone 3", "Act VIII Zone 1", "Act VIII Zone 2", "Act VIII Zone 3"],
+    "Image": ""
+  },
+  {
+    "Item Name": "The Light of Dawn",
+    "Item Category": "Weapons",
+    "Drop Chance": "9.75:287,220",
+    "Locations": ["Act VI Zone 1", "Act VI Zone 2", "Act VI Zone 3", "Act VIII Zone 1", "Act VIII Zone 2", "Act VIII Zone 3"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Sung Lee's Destroyer Flail",
+    "Item Category": "Weapons",
+    "Drop Chance": "N/A",
+    "Locations": ["Sung Lee"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Pit Ravager's Cetratus",
+    "Item Category": "Shields",
+    "Drop Chance": "N/A",
+    "Locations": ["Possessed Luna"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Demon's Mirror",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:566,750",
+    "Locations": ["Act VI Zone 1", "Act VI Zone 2", "Act VI Zone 3", "Act VI Zone 4", "Act VI Zone 5", "Act VI Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Tombstone",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:466,750",
+    "Locations": ["Act III Zone 4", "Act III Zone 5", "Act III Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Ancient Aegis",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:356,750",
+    "Locations": ["Act III Zone 1", "Act III Zone 2", "Act III Zone 3", "Act III Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Celestial's Authority",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:1,266,750",
+    "Locations": ["Act VI Zone 1", "Act VI Zone 2", "Act VI Zone 3", "Act VI Zone 4", "Act VI Zone 5"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Shield of the Abyss",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:366,750",
+    "Locations": ["Act II Zone 4", "Act II Zone 5", "Act V Zone 4", "Act V Zone 5", "Act V Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Defender's Justice",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:488,750",
+    "Locations": ["Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Suomi Finland Perkele",
+    "Item Category": "Shields",
+    "Drop Chance": "9.75:626,750",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5"],
+    "Image": ""
+  },
+  {
+    "Item Name": "High Roller’s Deathcrown",
+    "Item Category": "Helmets",
+    "Drop Chance": "N/A",
+    "Locations": ["Possessed Luna"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Harlequinn's Veil",
+    "Item Category": "Helmets",
+    "Drop Chance": "9.75:1,266,750",
+    "Locations": ["Act I Zone 5", "Act I Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Grimbone's Visage",
+    "Item Category": "Helmets",
+    "Drop Chance": "N/A",
+    "Locations": ["Grimbone"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Nikita's KJ-33 Helmet",
+    "Item Category": "Helmets",
+    "Drop Chance": "9.75:474,750",
+    "Locations": ["Act I Zone 1", "Act I Zone 2", "Act I Zone 5", "Act I Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Lava King's Lost Mask",
+    "Item Category": "Helmets",
+    "Drop Chance": "9.75:464,750",
+    "Locations": ["Act VI Zone 5", "Act VI Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Gaze of the Oblivion",
+    "Item Category": "Helmets",
+    "Drop Chance": "N/A",
+    "Locations": ["Possessed Luna"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Sight of the Gods",
+    "Item Category": "Helmets",
+    "Drop Chance": "9.75:464,750",
+    "Locations": ["Act VIII Zone 1", "Act VIII Zone 2"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Soulflaming Marchers",
+    "Item Category": "Boots",
+    "Drop Chance": "N/A",
+    "Locations": ["Uber Damien"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Grimbone's Marchers",
+    "Item Category": "Boots",
+    "Drop Chance": "N/A",
+    "Locations": ["Grimbone"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Stranded Boot",
+    "Item Category": "Boots",
+    "Drop Chance": "N/A",
+    "Locations": ["Possessed Luna"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Steampowered Flamewalkers",
+    "Item Category": "Boots",
+    "Drop Chance": "9.75:96,225",
+    "Locations": ["Act VI Zone 3", "Act VI Zone 4", "Act VIII Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Fumacinha's Favela Flipflop",
+    "Item Category": "Boots",
+    "Drop Chance": "9.75:147,225",
+    "Locations": ["Act VII Zone 2", "Act VII Zone 3", "Act VII Zone 4"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Wind Walker's Step",
+    "Item Category": "Boots",
+    "Drop Chance": "9.75:99,225",
+    "Locations": ["Act III Zone 4", "Act III Zone 5", "Act III Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Pearlescent Dream",
+    "Item Category": "Boots",
+    "Drop Chance": "9.75:97,225",
+    "Locations": ["Act VII Zone 2", "Act VII Zone 3", "Act VII Zone 4"],
+    "Image": ""
+  },
+   {
+    "Item Name": "Muspelheim Guardian's Scorched Plate",
+    "Item Category": "Armor",
+    "Drop Chance": "9.75:68,500",
+    "Locations": ["Act VIII Dungeons", "Act VIII Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Venomsteel Carapace",
+    "Item Category": "Armor",
+    "Drop Chance": "9.75:68,500",
+    "Locations": ["Act IV Zone 2", "Act IV Zone 3", "Act IV Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Isarius Ironthorn Breastplate",
+    "Item Category": "Armor",
+    "Drop Chance": "9.75:68,500",
+    "Locations": ["Act I Boss Dungeons", "Act II Boss Dungeons", "Act III Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Stoneplate of Corruption",
+    "Item Category": "Armor",
+    "Drop Chance": "N/A",
+    "Locations": ["Uber Damien"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Grimbone's Ribcage",
+    "Item Category": "Armor",
+    "Drop Chance": "N/A",
+    "Locations": ["Grimbone"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Thunder Guardian's Plate",
+    "Item Category": "Armor",
+    "Drop Chance": "9.75:82,500",
+    "Locations": ["Act V Zone 1", "Act V Zone 2", "Act V Zone 3", "Act I Boss Dungeons", "Act II Boss Dungeons", "Act III Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Tundra Hunter's Long Coat",
+    "Item Category": "Armor",
+    "Drop Chance": "9.75:68,500",
+    "Locations": ["Act II Zone 3", "Act II Zone 4", "Act II Zone 5", "Act II Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Freya's Frozen Buckle",
+    "Item Category": "Belts",
+    "Drop Chance": "9.75:48,765",
+    "Locations": ["Act II Zone 1", "Act II Zone 2", "Act II Zone 3", "Act II Zone 4", "Act II Zone 5", "Act II Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Soulburn Belt",
+    "Item Category": "Belts",
+    "Drop Chance": "9.75:48,765",
+    "Locations": ["Act VI Zone 1", "Act VI Zone 2", "Act VI Zone 3", "Act VI Zone 4", "Act VI Zone 5", "Act VI Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Set's Lightning Sash",
+    "Item Category": "Belts",
+    "Drop Chance": "9.75:48,765",
+    "Locations": ["Act V Zone 1", "Act V Zone 2", "Act V Zone 3", "Act V Zone 4", "Act V Zone 5", "Act V Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Belt of Infinite Wealth",
+    "Item Category": "Belts",
+    "Drop Chance": "9.75:22,650",
+    "Locations": ["Act III Zone 1", "Act III Zone 2", "Act III Zone 3", "Act III Overworld", "Act III Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Azazel's Despair",
+    "Item Category": "Amulets & Rings",
+    "Drop Chance": "9.75:1,282,500",
+    "Locations": ["Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Soulforged Ring",
+    "Item Category": "Amulets & Rings",
+    "Drop Chance": "9.75:157,580",
+    "Locations": ["Act IV Zone 1", "Act IV Zone 2", "Act IV Zone 3", "Act IV Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Stone of Premonition",
+    "Item Category": "Amulets & Rings",
+    "Drop Chance": "9.75:67,580",
+    "Locations": ["Act IV Zone 1", "Act IV Zone 2", "Act IV Zone 3", "Act IV Boss Dungeons"],
+    "Image": ""
+  },
+  {
+    "Item Name": "Signet of Corruption",
+    "Item Category": "Amulets & Rings",
+    "Drop Chance": "N/A",
+    "Locations": ["Damien (Inferno Difficulty)"],
+    "Image": ""
+  }
+ ]
