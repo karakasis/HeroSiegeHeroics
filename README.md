@@ -1,3 +1,6 @@
+## Trademark
+
+This application was built using **Cursor AI**. All rights reserved.
 # Hero Siege Heroics
 
 Live version: https://karakasis.github.io/HeroSiegeHeroics/
