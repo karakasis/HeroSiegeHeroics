@@ -1,5 +1,293 @@
 [
   {
+    "Item Name": "Glock 22",
+    "Locations": [],
+    "Item Category": "Gun",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Damien´s Corrupted Head",
+    "Locations": [],
+    "Item Category": "Book",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Grand Arch Wizard´s Mantle",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Light Bringer's Mark",
+    "Locations": [],
+    "Item Category": "Amulet",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Abomination's Gut Ripper",
+    "Locations": [],
+    "Item Category": "Axe",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
+  },
+  {
+    "Item Name": "Rugal's Sash of Undertaking",
+    "Locations": [],
+    "Item Category": "Belt",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
+  },
+  {
+    "Item Name": "Executioner's Cocoon",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
+  },
+  {
+    "Item Name": "Exiled Pagan's Mantle",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 85
+  },
+  {
+    "Item Name": "Gabriel's Broken Wings",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Gem King's Garb",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 74
+  },
+  {
+    "Item Name": "Noxious Hunter's Reward",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 84
+  },
+  {
+    "Item Name": "Marcher's of Hatred",
+    "Locations": [],
+    "Item Category": "Boots",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Eternity",
+    "Locations": [],
+    "Item Category": "Bow",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Plague Shot",
+    "Locations": [],
+    "Item Category": "Charm",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
+  },
+  {
+    "Item Name": "Aimbot.exe",
+    "Locations": [],
+    "Item Category": "Charm",
+    "Image": "",
+    "Drop Chance": "N/A"
+  },
+  {
+    "Item Name": "Sassy's Dislocated Foot",
+    "Locations": [],
+    "Item Category": "Charm",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Yoshi's Throat-Cutters",
+    "Locations": [],
+    "Item Category": "Claw",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 72
+  },
+  {
+    "Item Name": "Eternal Death",
+    "Locations": [],
+    "Item Category": "Helmet",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Gabriel's Dauntless Vision",
+    "Locations": [],
+    "Item Category": "Helmet",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
+  },
+  {
+    "Item Name": "Revenant's Lasher",
+    "Locations": [],
+    "Item Category": "Mace",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
+  },
+  {
+    "Item Name": "Sung Lee's Flask of Carnage",
+    "Locations": [],
+    "Item Category": "Potion",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "  Dark Vial of Corrosion",
+    "Locations": [],
+    "Item Category": "Potion",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Gabriel's Unholy Oath",
+    "Locations": [],
+    "Item Category": "Shield",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Crow's Whisper",
+    "Locations": [],
+    "Item Category": "Staff",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Necrobutcher's Curse",
+    "Locations": [],
+    "Item Category": "Staff",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 88
+  },
+  {
+    "Item Name": "Blood Moon Crescent",
+    "Locations": [],
+    "Item Category": "Sword",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Gabriel's Broken Resolve",
+    "Locations": [],
+    "Item Category": "Sword",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 97
+  },
+  {
+    "Item Name": "Gut's HFS",
+    "Locations": [],
+    "Item Category": "Sword",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
+  },
+  {
+    "Item Name": "Stofflix Cooking Cleaver",
+    "Locations": [],
+    "Item Category": "Sword",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "The Hope Ender",
+    "Locations": [],
+    "Item Category": "Sword",
+    "Image": "",
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
     "Item Name": "Astral Projector",
     "Locations": [
       "Act VII Zone 1",
@@ -10,7 +298,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "9.75:152,550"
+    "Drop Chance": "9.75:152,550",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Hypothermia",
@@ -25,7 +316,10 @@
     ],
     "Item Category": "Spellblade",
     "Image": "",
-    "Drop Chance": "9.75:96,666"
+    "Drop Chance": "9.75:96,666",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Clafaxier's Legacy",
@@ -40,7 +334,10 @@
     ],
     "Item Category": "Wand",
     "Image": "",
-    "Drop Chance": "9.75:110,000"
+    "Drop Chance": "9.75:110,000",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Crackling Thunder",
@@ -49,7 +346,10 @@
     ],
     "Item Category": "Cane",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 86
   },
   {
     "Item Name": "Arrow of Niflheim",
@@ -58,7 +358,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Recurving Corrosion",
@@ -71,7 +374,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "9.75:152,550"
+    "Drop Chance": "9.75:152,550",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Dreadnought",
@@ -82,7 +388,10 @@
     ],
     "Item Category": "Gun",
     "Image": "",
-    "Drop Chance": "9.75:587,120"
+    "Drop Chance": "9.75:587,120",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Beacon of Shadows",
@@ -91,7 +400,10 @@
     ],
     "Item Category": "Wand",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Pagan God's Blasphemy",
@@ -101,7 +413,10 @@
     ],
     "Item Category": "Cane",
     "Image": "",
-    "Drop Chance": "9.75:98,750"
+    "Drop Chance": "9.75:98,750",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Monsoon",
@@ -110,7 +425,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "9.75:166,752"
+    "Drop Chance": "9.75:166,752",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 82
   },
   {
     "Item Name": "Deathquill",
@@ -123,7 +441,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "9.75:116,752"
+    "Drop Chance": "9.75:116,752",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 95
   },
   {
     "Item Name": "AK-47",
@@ -136,7 +457,10 @@
     ],
     "Item Category": "Gun",
     "Image": "",
-    "Drop Chance": "9.75:127,120"
+    "Drop Chance": "9.75:127,120",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Bonetti's Rapier",
@@ -147,7 +471,10 @@
     ],
     "Item Category": "Sword",
     "Image": "",
-    "Drop Chance": "9.75:96,155"
+    "Drop Chance": "9.75:96,155",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 93
   },
   {
     "Item Name": "The Eye of Tarethiel",
@@ -157,7 +484,10 @@
     ],
     "Item Category": "Cane",
     "Image": "",
-    "Drop Chance": "9.75:68,750"
+    "Drop Chance": "9.75:68,750",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Arachno Phobia",
@@ -167,7 +497,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "9.75:296,752"
+    "Drop Chance": "9.75:296,752",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Shadowfury",
@@ -176,7 +509,10 @@
     ],
     "Item Category": "Bow",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Manafunneler's Conjurer",
@@ -185,7 +521,10 @@
     ],
     "Item Category": "Wand",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 82
   },
   {
     "Item Name": "Oculus of Ages",
@@ -200,7 +539,10 @@
     ],
     "Item Category": "Wand",
     "Image": "",
-    "Drop Chance": "9.75:114,626"
+    "Drop Chance": "9.75:114,626",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 75
   },
   {
     "Item Name": "Blood of Abaddon",
@@ -211,7 +553,10 @@
     ],
     "Item Category": "Cane",
     "Image": "",
-    "Drop Chance": "9.75:96,750"
+    "Drop Chance": "9.75:96,750",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Grimbone's Scythe",
@@ -220,7 +565,10 @@
     ],
     "Item Category": "Sword",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Serpent's Tooth",
@@ -230,7 +578,10 @@
     ],
     "Item Category": "Throwing Weapon",
     "Image": "",
-    "Drop Chance": "9.75:96,625"
+    "Drop Chance": "9.75:96,625",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 84
   },
   {
     "Item Name": "Scarred Battle Darts",
@@ -239,7 +590,10 @@
     ],
     "Item Category": "Throwing Weapon",
     "Image": "",
-    "Drop Chance": "9.75:82,425"
+    "Drop Chance": "9.75:82,425",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 93
   },
   {
     "Item Name": "Sidewinder",
@@ -248,7 +602,10 @@
     ],
     "Item Category": "Throwing Weapon",
     "Image": "",
-    "Drop Chance": "9.75:92,425"
+    "Drop Chance": "9.75:92,425",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 88
   },
   {
     "Item Name": "Shadow Carver",
@@ -257,7 +614,10 @@
     ],
     "Item Category": "Polearm",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Arch Angel's Phase Blade",
@@ -267,7 +627,10 @@
     ],
     "Item Category": "Sword",
     "Image": "",
-    "Drop Chance": "9.75:1,116,155"
+    "Drop Chance": "9.75:1,116,155",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Glowstick Estoc",
@@ -278,7 +641,10 @@
     ],
     "Item Category": "Sword",
     "Image": "",
-    "Drop Chance": "9.75:196,155"
+    "Drop Chance": "9.75:196,155",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 95
   },
   {
     "Item Name": "Spell Eater",
@@ -287,7 +653,10 @@
     ],
     "Item Category": "Staff",
     "Image": "",
-    "Drop Chance": "9.75:84,855"
+    "Drop Chance": "9.75:84,855",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Brimskull Trident",
@@ -297,7 +666,10 @@
     ],
     "Item Category": "Polearm",
     "Image": "",
-    "Drop Chance": "9.75:933,720"
+    "Drop Chance": "9.75:933,720",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Glacier Talons",
@@ -308,7 +680,7 @@
       "Act II Zone 4",
       "Act II Zone 5"
     ],
-    "Item Category": "Weapons",
+    "Item Category": "Claw",
     "Image": "",
     "Drop Chance": "9.75:287,220"
   },
@@ -320,7 +692,10 @@
     ],
     "Item Category": "Throwing Weapon",
     "Image": "",
-    "Drop Chance": "9.75:96,625"
+    "Drop Chance": "9.75:96,625",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Diablo",
@@ -329,7 +704,10 @@
     ],
     "Item Category": "Chainsaw",
     "Image": "",
-    "Drop Chance": "9.75:116,750"
+    "Drop Chance": "9.75:116,750",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Riftmaster's Dirge",
@@ -339,7 +717,10 @@
     ],
     "Item Category": "Dagger",
     "Image": "",
-    "Drop Chance": "9.75:576,425"
+    "Drop Chance": "9.75:576,425",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Headsman’s Bloodthirster",
@@ -348,7 +729,10 @@
     ],
     "Item Category": "Axe",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Ukko’s Revenge",
@@ -358,7 +742,10 @@
     ],
     "Item Category": "Throwing Weapon",
     "Image": "",
-    "Drop Chance": "9.75:418,455"
+    "Drop Chance": "9.75:418,455",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Book of Cold Death",
@@ -369,7 +756,7 @@
       "Act II Zone 4",
       "Act II Zone 5"
     ],
-    "Item Category": "Weapons",
+    "Item Category": "Book",
     "Image": "",
     "Drop Chance": "9.75:246,755"
   },
@@ -380,7 +767,10 @@
     "Locations": [
       "Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Dark Knight's Lance",
@@ -392,7 +782,10 @@
       "Act V Zone 2",
       "Act V Zone 3"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Wraith Forged Cleaver",
@@ -403,7 +796,10 @@
       "Act VIII Zone 5",
       "Act VIII Boss Dungeon"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Winter's Bite",
@@ -413,7 +809,10 @@
       "Act II Dungeons",
       "Act II Boss Dungeon"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 97
   },
   {
     "Item Name": "Gem King's Cleaver",
@@ -426,7 +825,10 @@
       "Act I Zone 4",
       "Act I Zone 5"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Shishkebab",
@@ -439,7 +841,10 @@
       "Act III Zone 4",
       "Act III Zone 5"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Luci's Day",
@@ -451,7 +856,10 @@
       "Act IV Zone 1",
       "Act IV Zone 2"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Rakhul's Legion Crusher",
@@ -460,7 +868,10 @@
     "Locations": [
       "King Rakhul"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Sähköpuimuri",
@@ -474,7 +885,10 @@
       "Act VIII Zone 2",
       "Act VIII Zone 3"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "The Light of Dawn",
@@ -488,7 +902,10 @@
       "Act VIII Zone 2",
       "Act VIII Zone 3"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Sung Lee's Destroyer Flail",
@@ -497,7 +914,10 @@
     "Locations": [
       "Sung Lee"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Pit Ravager's Cetratus",
@@ -506,7 +926,10 @@
     "Locations": [
       "Possessed Luna"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Demon's Mirror",
@@ -520,7 +943,10 @@
       "Act VI Zone 5",
       "Act VI Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Tombstone",
@@ -531,7 +957,10 @@
       "Act III Zone 5",
       "Act III Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Ancient Aegis",
@@ -543,7 +972,10 @@
       "Act III Zone 3",
       "Act III Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 95
   },
   {
     "Item Name": "Celestial's Authority",
@@ -556,7 +988,10 @@
       "Act VI Zone 4",
       "Act VI Zone 5"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 95
   },
   {
     "Item Name": "Shield of the Abyss",
@@ -569,7 +1004,10 @@
       "Act V Zone 5",
       "Act V Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Defender's Justice",
@@ -578,7 +1016,10 @@
     "Locations": [
       "Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "SUOMI FINLAND PERKELE",
@@ -591,7 +1032,10 @@
       "Act II Zone 4",
       "Act II Zone 5"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "High Roller’s Deathcrown",
@@ -600,7 +1044,10 @@
     "Locations": [
       "Possessed Luna"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 1
   },
   {
     "Item Name": "Harlequinn's Veil",
@@ -610,7 +1057,10 @@
       "Act I Zone 5",
       "Act I Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Grimbone's Visage",
@@ -619,7 +1069,10 @@
     "Locations": [
       "Grimbone"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Nikita's KJ-33 Helmet",
@@ -631,7 +1084,10 @@
       "Act I Zone 5",
       "Act I Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Lava King's Lost Mask",
@@ -641,7 +1097,10 @@
       "Act VI Zone 5",
       "Act VI Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Gaze of the Oblivion",
@@ -650,7 +1109,10 @@
     "Locations": [
       "Possessed Luna"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Sight Of The Gods",
@@ -660,7 +1122,10 @@
       "Act VIII Zone 1",
       "Act VIII Zone 2"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Soulflaming Marchers",
@@ -669,7 +1134,10 @@
     "Locations": [
       "Uber Damien"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Grimbone's Marchers",
@@ -678,7 +1146,10 @@
     "Locations": [
       "Grimbone"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Stranded Boot",
@@ -687,7 +1158,10 @@
     "Locations": [
       "Possessed Luna"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Steampowered Flamewalkers",
@@ -698,7 +1172,10 @@
       "Act VI Zone 4",
       "Act VIII Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Fumacinha's Favela Flipflop",
@@ -709,7 +1186,10 @@
       "Act VII Zone 3",
       "Act VII Zone 4"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 97
   },
   {
     "Item Name": "Wind Walker's Step",
@@ -720,7 +1200,10 @@
       "Act III Zone 5",
       "Act III Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Pearlescent Dream",
@@ -731,7 +1214,10 @@
       "Act VII Zone 3",
       "Act VII Zone 4"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 97
   },
   {
     "Item Name": "Muspelheim Guardian's Scorched Plate",
@@ -741,7 +1227,10 @@
       "Act VIII Dungeons",
       "Act VIII Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Venomsteel Carapace",
@@ -752,7 +1241,10 @@
       "Act IV Zone 3",
       "Act IV Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Isarius Ironthorn Breastplate",
@@ -763,7 +1255,10 @@
       "Act II Boss Dungeons",
       "Act III Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Stoneplate of Corruption",
@@ -772,7 +1267,10 @@
     "Locations": [
       "Uber Damien"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 74
   },
   {
     "Item Name": "Grimbone's Ribcage",
@@ -781,7 +1279,10 @@
     "Locations": [
       "Grimbone"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Thunder Guardian's Plate",
@@ -795,7 +1296,10 @@
       "Act II Boss Dungeons",
       "Act III Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Tundra Hunter's Long Coat",
@@ -807,14 +1311,20 @@
       "Act II Zone 5",
       "Act II Boss Dungeons"
     ],
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Demonfire Accelerators",
     "Item Category": "Gloves",
     "Locations": [],
     "Drop Chance": "9.75:1118550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Midas' Hands",
@@ -823,7 +1333,10 @@
       "Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Rimskin Assassins",
@@ -832,7 +1345,10 @@
       "Possessed Luna (Inferno Only)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 69
   },
   {
     "Item Name": "Manahungerers",
@@ -842,7 +1358,10 @@
       "Act III Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Frostbitten Necrosis",
@@ -857,7 +1376,10 @@
       "Act II Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Tectonic Grips",
@@ -872,7 +1394,10 @@
       "Act V Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Arcanum Asphyxiators",
@@ -887,7 +1412,10 @@
       "Act IV Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Grasp of the Phoenix",
@@ -902,7 +1430,10 @@
       "Act I Boss Dungeons"
     ],
     "Drop Chance": "9.75:68550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Necrocaller's Grips",
@@ -912,7 +1443,10 @@
       "Act II Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Fighter Magi's Grips",
@@ -921,7 +1455,10 @@
       "Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Ali's Boxing Gloves",
@@ -930,7 +1467,10 @@
       "Dungeons"
     ],
     "Drop Chance": "9.75:68550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Plague Bringer's Touch",
@@ -945,7 +1485,10 @@
       "Act II Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Rakhul's Stone Hands",
@@ -954,7 +1497,10 @@
       "King Rakhul"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Shadow Occultist's Wraps",
@@ -963,7 +1509,10 @@
       "Sung Lee"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Spellweavers",
@@ -973,7 +1522,10 @@
       "Act III Boss Dungeons"
     ],
     "Drop Chance": "9.75:88550",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Brawler's Fighting Mitts",
@@ -982,27 +1534,36 @@
       "Sung Lee"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Lilith's Scorn",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [],
     "Drop Chance": "9.75:4812000",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Thoth's Agony",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [
       "Amun Ra"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Gryphon's Claw",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [
       "Act V Zone 1",
       "Act V Zone 2",
@@ -1013,16 +1574,22 @@
       "Act V Boss Dungeons"
     ],
     "Drop Chance": "9.75:69860",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Eagle's Claw",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [
       "Possessed Luna"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Amulet of Colosseum",
@@ -1031,36 +1598,48 @@
       "King Rakhul"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Tarethiel's Fall",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [
       "Uber Damien"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Compass of Wealth",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [
       "Act III Dungeons",
       "Act III Boss Dungeons"
     ],
     "Drop Chance": "9.75:79860",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Philosopher's Stone",
-    "Item Category": "Unknown",
+    "Item Category": "Amulet",
     "Locations": [
       "Act VII Boss Dungeons",
       "Act VIII Boss Dungeons"
     ],
     "Drop Chance": "9.75:81200",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Pendant of Eternity",
@@ -1073,38 +1652,50 @@
       "Act II Zone 5"
     ],
     "Drop Chance": "9.75:82500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Stormloop",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Karp King (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Azazel's Despair",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Boss Dungeons"
     ],
     "Drop Chance": "9.75:1282500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 1
   },
   {
     "Item Name": "Arcanis",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Anubis (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Stone of Premonition",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Act IV Zone 1",
       "Act IV Zone 2",
@@ -1112,38 +1703,50 @@
       "Act IV Boss Dungeons"
     ],
     "Drop Chance": "9.75:67580",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Signet of Corruption",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Damien (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Hellfire Halo",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Satan (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Signet of Harbringer",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Grim Reaper (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Giant's Band of Strength",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Act III Zone 1",
       "Act III Zone 2",
@@ -1152,20 +1755,26 @@
       "Act III Zone 5"
     ],
     "Drop Chance": "9.75:82500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Destroyer's End",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Gurag (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Mana Bender's Will",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Act IV Zone 1",
       "Act IV Zone 2",
@@ -1173,43 +1782,58 @@
       "Act IV Boss Dungeons"
     ],
     "Drop Chance": "9.75:157580",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Rakhul's Ritual Band",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "King Rakhul"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Sung Lee's Unleashed Rage",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Sung Lee"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Quickening Zephyr",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Dungeons"
     ],
     "Drop Chance": "9.75:66580",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Emblem of the Daemon",
-    "Item Category": "Unknown",
+    "Item Category": "Ring",
     "Locations": [
       "Possessed Luna"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 92
   },
   {
     "Item Name": "Soulforged Ring",
@@ -1218,39 +1842,41 @@
       "Possessed Luna"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
-  },
-  {
-    "Item Name": "Fury of Tarethiel",
-    "Item Category": "Unknown",
-    "Locations": [],
-    "Drop Chance": "9.75:1277580",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 1
   },
   {
     "Item Name": "El Patrón's Madness",
-    "Item Category": "Unknown",
+    "Item Category": "Belt",
     "Locations": [],
     "Drop Chance": "9.75:50696969",
     "Image": ""
   },
   {
     "Item Name": "Trophy Hunter",
-    "Item Category": "Unknown",
+    "Item Category": "Belt",
     "Locations": [
       "Possessed Luna (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 64
   },
   {
     "Item Name": "Komodo's Bloodstrap",
-    "Item Category": "Unknown",
+    "Item Category": "Belt",
     "Locations": [
       "Possessed Luna"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Freya's Frozen Buckle",
@@ -1264,7 +1890,10 @@
       "Act II Dungeons"
     ],
     "Drop Chance": "9.75:48765",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Soulburn Belt",
@@ -1278,7 +1907,10 @@
       "Act VI Dungeons"
     ],
     "Drop Chance": "9.75:48765",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Gladiator King's Belt",
@@ -1287,7 +1919,10 @@
       "King Rakhul"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Sash of Eternal Hatred",
@@ -1296,7 +1931,10 @@
       "Uber Damien"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Girdle of Eternal War",
@@ -1319,7 +1957,10 @@
       "Act V Dungeons"
     ],
     "Drop Chance": "9.75:48765",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Belt of Infinite Wealth",
@@ -1329,7 +1970,10 @@
       "Act III Boss Dungeons"
     ],
     "Drop Chance": "9.75:22650",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Belt of Skulls",
@@ -1342,110 +1986,149 @@
       "Act IV Zone 5"
     ],
     "Drop Chance": "9.75:82500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 98
   },
   {
     "Item Name": "Annihilator",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:1358450",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 72
   },
   {
     "Item Name": "Sobek's Fall",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Amun Ra"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Finger of Despair",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Amun Ra (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Rotten Pumpkin",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:2408450",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Lilith's Wrath",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:4822500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Arcane Pumpkin",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:2408450",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 94
   },
   {
     "Item Name": "Eye of Rakhul",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "King Rakhul"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Chaos Gemstone",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Possessed Luna"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Gas Canister",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:72500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Tablet of Awakening",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Boss Dungeons",
       "Dungeons"
     ],
     "Drop Chance": "9.75:1164450",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 75
   },
   {
     "Item Name": "Torstein's Anvil",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:82500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Tarethiel's Ancient Wisdom",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Act I Zone 3",
       "Act I Zone 4",
       "Act I Boss Dungeons"
     ],
     "Drop Chance": "9.75:68950",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 96
   },
   {
     "Item Name": "Graxy's Mom Lure",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Act II Zone 1",
       "Act II Zone 2",
@@ -1456,7 +2139,7 @@
   },
   {
     "Item Name": "Storm in a Vial",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Act VIII Zone 1",
       "Act VIII Zone 2",
@@ -1469,28 +2152,37 @@
   },
   {
     "Item Name": "Loaded Dice",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Boss Dungeons",
       "Dungeons"
     ],
     "Drop Chance": "9.75:64450",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 99
   },
   {
     "Item Name": "Fulgurite",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [],
     "Drop Chance": "9.75:162500",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Torch of Shadows",
-    "Item Category": "Unknown",
+    "Item Category": "Charm",
     "Locations": [
       "Uber Reaper (Inferno Difficulty)"
     ],
     "Drop Chance": "N/A",
-    "Image": ""
+    "Image": "",
+    "Item Rarity": "Heroic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   }
 ]

@@ -380,6 +380,82 @@ button:disabled:hover {
   background: #5d5d5d;
 }
 
+/* Styles for searched item card */
+.item-card-searched {
+  border: 2px solid #3d3d3d; /* Increased border width for visibility */
+  padding: 15px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  z-index: 1;
+  /* Adjustments for searched item */
+  height: auto;
+  min-height: 150px;
+  width: calc(100% - 40px); /* Adjusted width calculation */
+  margin-bottom: 20px;
+}
+
+.item-card-searched:hover {
+  border-color: #4d4d4d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+.item-card-searched h3 {
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.item-card-searched .category {
+  color: #b0b0b0;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.item-card-searched .drop-chance {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* width: auto; /* Ensure it's not full width */
+  /* display: inline-block; /* Make it only as wide as its content */
+}
+
+.searched-locations {
+  margin: 10px 0;
+}
+
+.searched-locations strong {
+  color: white;
+}
+
+.locations-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-bottom: 30px; /* Space for drop chance */
+}
+
+.locations-list li {
+  padding: 3px 0;
+  color: #e0e0e0;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .container {

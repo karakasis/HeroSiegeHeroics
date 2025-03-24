@@ -8,13 +8,15 @@ let activeFilters = {
 // Function to fetch and load the JSON data from the file
 async function loadItemsData() {
   const response = await fetch('data.json', {
-    cache: 'no-store' // Prevent caching
+    cache: 'no-store'
   });
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  itemsData = await response.json();
+  const data = await response.json();
+  itemsData = data; // Set the global variable
   await initializePage();
+  return data; // Return the data
 }
 
 // Extracting the Acts, Locations, and Zones from the JSON data
@@ -101,7 +103,7 @@ function createZoneButtons() {
   
   // Define the zones explicitly since we know them
   const regularZones = ['Zone 1', 'Zone 2', 'Zone 3', 'Zone 4', 'Zone 5'];
-  const specialZones = ['Boss Dungeon', 'Dungeon'];
+  const specialZones = ['Boss Dungeons', 'Dungeons'];
   
   // Create regular zone buttons
   regularZones.forEach(zone => {
@@ -231,13 +233,19 @@ function toggleZoneFilter(zone, button) {
 
 // Function to apply all active filters
 function applyFilters() {
-  let filteredItems = [...itemsData];
+  // Check if itemsData is an array before trying to spread it
+  let filteredItems = Array.isArray(itemsData) ? [...itemsData] : [];
 
   // Apply Act filters
   if (activeFilters.acts.size > 0) {
     filteredItems = filteredItems.filter(item =>
+      item && item.Locations && Array.isArray(item.Locations) && 
       item.Locations.some(location => 
-        Array.from(activeFilters.acts).some(act => location.includes(act))
+        Array.from(activeFilters.acts).some(act => {
+          // Use regex to match exact Act (e.g., 'Act V' but not 'Act VI')
+          const actRegex = new RegExp(`^${act}\\b|\\s${act}\\b`);
+          return actRegex.test(location);
+        })
       )
     );
   }
@@ -273,9 +281,19 @@ function applyFilters() {
   // Apply Zone filters (only if an Act is selected)
   if (activeFilters.zones.size > 0 && activeFilters.acts.size > 0) {
     filteredItems = filteredItems.filter(item =>
-      item.Locations.some(location => 
-        Array.from(activeFilters.zones).some(zone => location.includes(zone))
-      )
+      item.Locations.some(location => {
+        // Get the selected Act
+        const selectedAct = Array.from(activeFilters.acts)[0];
+        // Use regex to match exact Act (e.g., 'Act V' but not 'Act VI')
+        const actRegex = new RegExp(`^${selectedAct}\\b|\\s${selectedAct}\\b`);
+        // Check if location contains the exact Act and the exact Zone
+        return actRegex.test(location) && 
+               Array.from(activeFilters.zones).some(zone => {
+                 // Use regex to match exact Zone (e.g., 'Zone 5' but not 'Zone 51')
+                 const zoneRegex = new RegExp(`^${zone}\\b|\\s${zone}\\b`);
+                 return zoneRegex.test(location);
+               });
+      })
     );
   }
 
@@ -311,7 +329,7 @@ function clearFilters() {
 // Function to parse drop chance and return a numeric value for sorting
 function parseDropChance(dropChance) {
   if (!dropChance || dropChance === 'N/A') {
-    return Infinity; // Put N/A items at the end
+    return -Infinity; // Put N/A items at the end
   }
   
   // Parse the format "X:Y" or "X%" or "X"
@@ -328,19 +346,15 @@ function parseDropChance(dropChance) {
 }
 
 // Function to display items with sorting
-function displayItems(filteredItems) {
+function displayItems(filteredItems = []) {
   const itemsContainer = document.getElementById('items-container');
+  const items = Array.isArray(filteredItems) ? filteredItems : [];
+
+  // Clear the items container
   itemsContainer.innerHTML = '';
-  
-  // Sort items by drop chance (highest to lowest)
-  const sortedItems = [...filteredItems].sort((a, b) => {
-    const chanceA = parseDropChance(a['Drop Chance']);
-    const chanceB = parseDropChance(b['Drop Chance']);
-    return chanceB - chanceA; // Sort from highest to lowest (most common to rarest)
-  });
 
   // If no items match the filters, show a message
-  if (sortedItems.length === 0) {
+  if (items.length === 0) {
     const noItemsMessage = document.createElement('div');
     noItemsMessage.className = 'no-items-message';
     noItemsMessage.textContent = 'No items match the selected filters.';
@@ -348,28 +362,116 @@ function displayItems(filteredItems) {
     return;
   }
 
+  // Sort items by drop chance (from rarest to most common)
+  const sortedItems = [...items].sort((a, b) => {
+    const chanceA = parseDropChance(a['Drop Chance']);
+    const chanceB = parseDropChance(b['Drop Chance']);
+    return chanceB - chanceA; // Descending order (rarest to most common)
+  });
+
   // Display matching items
   sortedItems.forEach(item => {
     const itemCard = createItemCard(item);
     itemsContainer.appendChild(itemCard);
-  });
+  });}
+
+
+// Add console logging to loadItemsData function
+async function loadItemsData() {
+  try {
+    const response = await fetch('data.json', {
+      cache: 'no-store'
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log('Data loaded:', data.length, 'items'); // Debug log
+    itemsData = data;
+    await initializePage();
+    displayItems(itemsData); // Show all items initially
+  } catch (error) {
+    console.error('Failed to load data:', error);
+    const itemsContainer = document.getElementById('items-container');
+    itemsContainer.innerHTML = `<div style="color: red; padding: 20px;">Error loading data: ${error.message}</div>`;
+  }
 }
 
-// Function to create item card with drop chance color
+// Function to create item card with drop chance color and dynamic border color
 function createItemCard(item) {
   const card = document.createElement('div');
   card.className = 'item-card';
   
   const dropChance = item['Drop Chance'];
   const dropChanceColor = getDropChanceColor(dropChance);
+  const borderColor = getBorderColor(item['Item Rarity']);
+  const itemTier = item['Item Tier'] || 'Unknown'; // Default to 'Unknown' if not specified
+  
+  card.style.borderColor = borderColor; // Set dynamic border color
   
   card.innerHTML = `
     <h3>${item['Item Name']}</h3>
     <div class="category">${item['Item Category']}</div>
+    <div class="item-tier">Tier: <span style="color: goldenrod;">${itemTier}</span></div> <!-- Apply color only to the value -->
     <div class="drop-chance" style="background-color: ${dropChanceColor}">${dropChance}</div>
   `;
   
   return card;
+}
+
+// Function to get border color based on item rarity
+function getBorderColor(rarity) {
+  switch (rarity) {
+    case 'Satanic':
+      return 'red';
+    case 'Heroic':
+      return 'teal';
+    case 'Unholy':
+      return 'pink';
+    case 'Angelic':
+      return 'yellow';
+    default:
+      return 'gray'; // Default color if rarity is not recognized
+  }
+}
+
+// Function to display searched item with dynamic border color
+function displaySearchedItem(item) {
+  clearFilters();
+  
+  const itemCard = document.createElement('div');
+  itemCard.className = 'item-card-searched';
+  
+  const dropChanceColor = getDropChanceColor(item['Drop Chance']);
+  const borderColor = getBorderColor(item['Item Rarity']);
+  const itemTier = item['Item Tier'] || 'Unknown'; // Default to 'Unknown' if not specified
+  
+  itemCard.style.borderColor = borderColor; // Set dynamic border color
+  
+  // Format locations list with better error handling
+  let locationsList = '';
+  if (item.Locations && Array.isArray(item.Locations) && item.Locations.length > 0) {
+    locationsList = item.Locations.map(loc => `<li>${loc}</li>`).join('');
+  } else {
+    locationsList = '<li>No location data available</li>';
+  }
+  
+  itemCard.innerHTML = `
+    <h3>${item['Item Name']}</h3>
+    <div class="category">${item['Item Category']}</div>
+    <div class="item-tier">Tier: <span style="color: goldenrod;">${itemTier}</span></div> <!-- Apply color only to the value -->
+    <div class="searched-locations">
+      <strong>Drops At:</strong>
+      <ul class="locations-list">
+        ${locationsList}
+      </ul>
+    </div>
+    <div class="drop-chance" style="background-color: ${dropChanceColor}">${item['Drop Chance']}</div>
+  `;
+  
+  const itemsContainer = document.getElementById('items-container');
+  itemsContainer.innerHTML = '';
+  itemsContainer.appendChild(itemCard);
 }
 
 // Function to get color based on drop chance
@@ -408,27 +510,46 @@ async function initializePage() {
 }
 
 // Call the loadItemsData function when the page loads
-window.onload = loadItemsData;
+// Remove the window.onload handler
+// window.onload = loadItemsData;
 
-// Update the event listener for clear filters button
-document.getElementById('clear-filters').addEventListener('click', () => {
-  // Clear all active states
-  document.querySelectorAll('button.active').forEach(button => {
-    button.classList.remove('active');
-  });
-  
-  // Reset all filters
-  activeFilters.acts.clear();
-  activeFilters.locations.clear();
-  activeFilters.zones.clear();
-  
-  // Reset zone buttons state
-  document.querySelectorAll('#zone-buttons button').forEach(button => {
-    button.disabled = true;
-  });
-  
-  // Update display to show all items
-  displayItems(itemsData);
+// Update the initialization code
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    // Disable all filter buttons until data is loaded
+    document.querySelectorAll('button[data-filter]').forEach(btn => {
+      btn.disabled = true;
+    });
+    
+    // Load data first
+    const response = await fetch('data.json', {
+      cache: 'no-store'
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log('Data loaded successfully:', data.length, 'items');
+    itemsData = data;
+    
+    // Then create UI elements
+    await createActButtons();
+    await createZoneButtons();
+    await createBossButtons();
+    
+    // Enable buttons after data is loaded
+    document.querySelectorAll('button[data-filter]').forEach(btn => {
+      btn.disabled = false;
+    });
+    
+    // Display items
+    displayItems(itemsData);
+  } catch (error) {
+    console.error('Failed to initialize the page:', error);
+    // Add error message to the UI
+    const itemsContainer = document.getElementById('items-container');
+    itemsContainer.innerHTML = '<div class="error-message">Failed to load item data. Please refresh the page.</div>';
+  }
 });
 
 // Update the updateDisplay function to handle z-index
@@ -456,8 +577,15 @@ function updateDisplay() {
     return;
   }
 
+  // Sort items by drop chance (from rarest to most common)
+  const sortedItems = [...filteredItems].sort((a, b) => {
+    const chanceA = parseDropChance(a['Drop Chance']);
+    const chanceB = parseDropChance(b['Drop Chance']);
+    return chanceB - chanceA; // Descending order (rarest to most common)
+  });
+
   // Display matching items
-  filteredItems.forEach(item => {
+  sortedItems.forEach(item => {
     const itemCard = document.createElement('div');
     itemCard.classList.add('item-card');
     const dropChanceColor = getDropChanceColor(item['Drop Chance']);
@@ -481,7 +609,6 @@ style.textContent = `
     font-size: 1.2em;
   }
 `;
-document.head.appendChild(style);
 
 // Search functionality
 let searchTimeout;
@@ -518,54 +645,70 @@ searchInput.addEventListener('input', function() {
 });
 
 // Handle search result selection
+// Add this near the top of your file to test console logging
+console.log('Script loaded and running');
+
+// Modify the search results event listener to use a more direct approach
+// Handle search result selection
 searchResults.addEventListener('click', function(e) {
+    console.log('Search result clicked');
+    // Remove the alert popup
+    // alert('Search result clicked'); // This will show a popup to confirm the event is firing
+    
     const resultItem = e.target.closest('.search-result-item');
     if (resultItem) {
+        console.log('Found result item:', resultItem);
         const itemName = resultItem.dataset.itemName;
+        console.log('Item name:', itemName);
         searchInput.value = itemName;
         searchResults.style.display = 'none';
         
         // Find and display the selected item
         const selectedItem = itemsData.find(item => item['Item Name'] === itemName);
+        console.log('Selected item from data:', selectedItem);
         if (selectedItem) {
-            displayItems([selectedItem]);
+            console.log('Calling displaySearchedItem');
+            displaySearchedItem(selectedItem);
+        } else {
+            console.error('Item not found in itemsData');
+            // Remove this alert as well
+            // alert('Item not found in data'); // Show an alert for debugging
         }
-    }
-});
-
-// Close search results when clicking outside
-document.addEventListener('click', function(e) {
-    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-        searchResults.style.display = 'none';
+    } else {
+        console.log('No result item found');
     }
 });
 
 function displaySearchedItem(item) {
-  // Clear all filters
   clearFilters();
   
-  // Create a detailed item card
   const itemCard = document.createElement('div');
-  itemCard.className = 'item-card searched-item';
+  itemCard.className = 'item-card-searched';
   
-  // Format locations string
-  const locations = item.Locations.map(loc => 
-    `${loc.Act} ${loc.Zone}${loc.Boss ? ` - ${loc.Boss}` : ''}`
-  ).join(', ');
+  const dropChanceColor = getDropChanceColor(item['Drop Chance']);
+  const borderColor = getBorderColor(item['Item Rarity']);
+  const itemTier = item['Item Tier'] || 'Unknown'; // Default to 'Unknown' if not specified
+  
+  itemCard.style.borderColor = borderColor; // Set dynamic border color
+  
+  // Format locations list with better error handling
+  let locationsList = '';
+  if (item.Locations && Array.isArray(item.Locations) && item.Locations.length > 0) {
+    locationsList = item.Locations.map(loc => `<li>${loc}</li>`).join('');
+  } else {
+    locationsList = '<li>No location data available</li>';
+  }
   
   itemCard.innerHTML = `
-    <div class="searched-item-header">
-      <h3>${item['Item Name']}</h3>
-      <div class="searched-item-category">${item['Item Category']}</div>
+    <h3>${item['Item Name']}</h3>
+    <div class="category">${item['Item Category']}</div>
+    <div class="searched-locations">
+      <strong>Drops At:</strong>
+      <ul class="locations-list">
+        ${locationsList}
+      </ul>
     </div>
-    <div class="searched-item-content">
-      <div class="searched-drop-chance" style="color: ${getDropChanceColor(item['Drop Chance'])}">
-        Drop Chance: ${item['Drop Chance']}
-      </div>
-      <div class="searched-locations">
-        <strong>Found in:</strong> ${locations}
-      </div>
-    </div>
+    <div class="drop-chance" style="background-color: ${dropChanceColor}">${item['Drop Chance']}</div>
   `;
   
   const itemsContainer = document.getElementById('items-container');
@@ -573,57 +716,31 @@ function displaySearchedItem(item) {
   itemsContainer.appendChild(itemCard);
 }
 
-// Add styles for searched items
-const searchStyles = document.createElement('style');
-searchStyles.textContent = `
-  .searched-item {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #2a2a2a;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+// Add these styles to the existing searchStyles
+// Check if searchStyles exists, if not create it
+const searchStyles = document.getElementById('search-styles') || document.createElement('style');
+searchStyles.id = 'search-styles';
+searchStyles.textContent += `
+  .locations-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 8px;
   }
-
-  .searched-item-header {
-    margin-bottom: 15px;
-  }
-
-  .searched-item-header h3 {
-    margin: 0;
-    color: #fff;
-    font-size: 1.5em;
-  }
-
-  .searched-item-category {
-    color: #888;
-    font-size: 0.9em;
-    margin-top: 5px;
-  }
-
-  .searched-item-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .searched-drop-chance {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: bold;
-  }
-
-  .searched-locations {
+  
+  .locations-list li {
+    padding: 4px 0;
     color: #e0e0e0;
-    line-height: 1.4;
   }
-
-  .searched-locations strong {
-    color: #fff;
+  
+  .searched-item-content {
+    gap: 15px;
   }
 `;
-document.head.appendChild(searchStyles);
+
+// Make sure the style element is in the document
+if (!document.getElementById('search-styles')) {
+  document.head.appendChild(searchStyles);
+}
 
 async function loadBossCategories() {
   const response = await fetch('boss_categories.json');
@@ -640,11 +757,16 @@ function createFilterButton(boss, type) {
 
 // Update the initialization code
 document.addEventListener('DOMContentLoaded', async () => {
-  itemsData = await loadItemsData();
-  await createActButtons();
-  await createZoneButtons();
-  await createBossButtons(); // Changed to async
-  displayItems(itemsData);
-
-  // ... rest of existing initialization code ...
+  try {
+    await loadItemsData();
+    await createActButtons();
+    await createZoneButtons();
+    await createBossButtons(); // Changed to async
+    displayItems(itemsData);
+  } catch (error) {
+    console.error('Failed to initialize the page:', error);
+    // Add error message to the UI
+    const itemsContainer = document.getElementById('items-container');
+    itemsContainer.innerHTML = '<div class="error-message">Failed to load item data. Please refresh the page.</div>';
+  }
 });
