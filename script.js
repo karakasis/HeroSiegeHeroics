@@ -268,12 +268,13 @@ function applyFilters() {
         return item.Locations.some(loc => loc === 'Boss Dungeons');
       }
       
-      // Handle normal location filters
+      // Handle normal location filters with regex to match base location name
       return item.Locations.some(location => 
-        Array.from(activeFilters.locations).some(filter => 
-          location === filter && filter !== '' && 
-          filter !== 'dungeon_filter' && filter !== 'boss_dungeon_filter'
-        )
+        Array.from(activeFilters.locations).some(filter => {
+          const locationRegex = new RegExp(`^${filter}\\b`);
+          return locationRegex.test(location) && filter !== '' && 
+                 filter !== 'dungeon_filter' && filter !== 'boss_dungeon_filter';
+        })
       );
     });
   }
