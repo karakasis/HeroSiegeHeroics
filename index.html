@@ -7,24 +7,33 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search items..." autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
   <div class="container">
     <!-- Left column for filters -->
     <div class="filters-column">
-      <h2>Filters</h2>
-      <div id="act-buttons" class="filter-container">
-        <h3>Acts</h3>
-        <div class="button-group"></div>
-      </div>
-      <div id="zone-buttons" class="filter-container">
-        <h3>Zones</h3>
-        <div class="button-group regular-zones"></div>
-        <div class="special-zones">
-          <h3>Special Zones</h3>
-          <div class="button-group special-zones-group"></div>
+      <div id="act-drops" class="filter-container">
+        <div id="act-buttons" class="filter-container">
+          <h3>Acts</h3>
+          <div class="button-group"></div>
+        </div>
+        <div id="zone-buttons" class="filter-container">
+          <h3>Zones</h3>
+          <div class="button-group regular-zones"></div>
+          <div class="special-zones">
+            <h3>Special Zones</h3>
+            <div class="button-group special-zones-group"></div>
+          </div>
         </div>
       </div>
       <div id="location-buttons" class="filter-container">
         <h3>Bosses</h3>
+        <div class="button-group"></div>
+      </div>
+      <div id="global-drops" class="filter-container">
+        <h3>Global Drops</h3>
         <div class="button-group"></div>
       </div>
       <button id="clear-filters">Clear All Filters</button>

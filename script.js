@@ -6,25 +6,15 @@ let activeFilters = {
 };
 
 // Function to fetch and load the JSON data from the file
-function loadItemsData() {
-  fetch('data.json', {
+async function loadItemsData() {
+  const response = await fetch('data.json', {
     cache: 'no-store' // Prevent caching
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      itemsData = data;
-      initializePage();
-    })
-    .catch(error => {
-      console.error('Error loading data:', error);
-      // Don't show alert, just log the error
-      initializePage(); // Still initialize the page even if data loading fails
-    });
+  });
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  itemsData = await response.json();
+  await initializePage();
 }
 
 // Extracting the Acts, Locations, and Zones from the JSON data
@@ -38,28 +28,65 @@ const zones = [
 ];
 
 // Function to create and display the Act buttons
-function createActButtons() {
+async function createActButtons() {
   const actButtonsContainer = document.querySelector('#act-buttons .button-group');
   actButtonsContainer.innerHTML = ''; // Clear existing buttons
-  acts.forEach((act) => {
+  for (const act of acts) {
     const button = document.createElement('button');
     button.textContent = act;
     button.dataset.filter = act;
     button.addEventListener('click', () => toggleActFilter(act, button));
     actButtonsContainer.appendChild(button);
-  });
+  }
 }
 
 // Function to create and display the Boss buttons
-function createLocationButtons() {
-  const locationButtonsContainer = document.querySelector('#location-buttons .button-group');
-  locationButtonsContainer.innerHTML = ''; // Clear existing buttons
-  bosses.forEach((boss) => {
-    const button = document.createElement('button');
-    button.textContent = boss;
-    button.dataset.filter = boss;
-    button.addEventListener('click', () => toggleLocationFilter(boss, button));
-    locationButtonsContainer.appendChild(button);
+async function createBossButtons() {
+  const bossContainer = document.querySelector('#location-buttons .button-group');
+  const globalContainer = document.querySelector('#global-drops .button-group');
+  const bossCategories = await loadBossCategories();
+  
+  bossContainer.innerHTML = ''; // Clear existing buttons
+  globalContainer.innerHTML = ''; // Clear existing global drops buttons
+
+  // Add act bosses
+  bossCategories.act_bosses.forEach(boss => {
+    const button = createFilterButton(boss, 'location');
+    bossContainer.appendChild(button);
+  });
+
+  // Add spacing
+  bossContainer.appendChild(document.createElement('br'));
+
+  // Add uber bosses
+  bossCategories.uber_bosses.forEach(boss => {
+    const button = createFilterButton(boss, 'location');
+    bossContainer.appendChild(button);
+  });
+
+  // Add spacing
+  bossContainer.appendChild(document.createElement('br'));
+
+  // Add endgame bosses
+  bossCategories.endgame_bosses.forEach(boss => {
+    const button = createFilterButton(boss, 'location');
+    bossContainer.appendChild(button);
+  });
+
+  // Add spacing
+  bossContainer.appendChild(document.createElement('br'));
+
+  // Add pinnacle bosses
+  bossCategories.pinnacle_bosses.forEach(boss => {
+    const button = createFilterButton(boss, 'location');
+    bossContainer.appendChild(button);
+  });
+
+  // Add global drops to their own container
+  bossCategories.global_drops.forEach(location => {
+    const button = createFilterButton(location, 'location');
+    button.classList.add('global-drop');
+    globalContainer.appendChild(button);
   });
 }
 
@@ -142,29 +169,39 @@ function toggleActFilter(act, button) {
 
 // Function to toggle Location filter
 function toggleLocationFilter(location, button) {
-  // Clear all act buttons
-  document.querySelectorAll('#act-buttons button').forEach(btn => {
-    btn.classList.remove('active');
-  });
+  const isActive = button.classList.toggle('active');
   
-  // Clear all location buttons
-  document.querySelectorAll('#location-buttons button').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  
-  // Clear all zone buttons
-  document.querySelectorAll('#zone-buttons button').forEach(btn => {
-    btn.classList.remove('active');
-  });
-  
-  // Clear all filters
-  activeFilters.acts.clear();
-  activeFilters.locations.clear();
-  activeFilters.zones.clear();
-  
-  // Add the new location filter and button state
-  activeFilters.locations.add(location);
-  button.classList.add('active');
+  // Clear all filters and button states when activating any location filter
+  if (isActive) {
+    // Clear all other filter buttons
+    document.querySelectorAll('#act-buttons button, #zone-buttons button, #location-buttons button, #global-drops button').forEach(btn => {
+      if (btn !== button) {
+        btn.classList.remove('active');
+      }
+    });
+    
+    // Clear all filters
+    activeFilters.acts.clear();
+    activeFilters.locations.clear();
+    activeFilters.zones.clear();
+
+    // Add the new filter
+    if (location === 'Anywhere') {
+      activeFilters.locations.add('');
+    } else if (location === 'Dungeons') {
+      activeFilters.locations.add('dungeon_filter');
+    } else if (location === 'Boss Dungeons') {
+      activeFilters.locations.add('boss_dungeon_filter');
+    } else {
+      activeFilters.locations.add(location);
+    }
+  } else {
+    // If deactivating, just remove the filter
+    activeFilters.locations.delete(location);
+    activeFilters.locations.delete('');
+    activeFilters.locations.delete('dungeon_filter');
+    activeFilters.locations.delete('boss_dungeon_filter');
+  }
   
   // Update Zone buttons state
   updateZoneButtonsState();
@@ -207,9 +244,30 @@ function applyFilters() {
 
   // Apply Location filters
   if (activeFilters.locations.size > 0) {
-    filteredItems = filteredItems.filter(item =>
-      item.Locations.some(location => activeFilters.locations.has(location))
-    );
+    filteredItems = filteredItems.filter(item => {
+      // Handle empty locations (Anywhere)
+      if (activeFilters.locations.has('')) {
+        return item.Locations.length === 0 || item.Locations.some(loc => loc === '');
+      }
+      
+      // Handle global dungeon filter (exact match for "Dungeons")
+      if (activeFilters.locations.has('dungeon_filter')) {
+        return item.Locations.some(loc => loc === 'Dungeons');
+      }
+      
+      // Handle global boss dungeon filter (exact match for "Boss Dungeons")
+      if (activeFilters.locations.has('boss_dungeon_filter')) {
+        return item.Locations.some(loc => loc === 'Boss Dungeons');
+      }
+      
+      // Handle normal location filters
+      return item.Locations.some(location => 
+        Array.from(activeFilters.locations).some(filter => 
+          location === filter && filter !== '' && 
+          filter !== 'dungeon_filter' && filter !== 'boss_dungeon_filter'
+        )
+      );
+    });
   }
 
   // Apply Zone filters (only if an Act is selected)
@@ -225,9 +283,9 @@ function applyFilters() {
   if (activeFilters.acts.size > 0 && activeFilters.zones.size === 0) {
     filteredItems = [];
   }
-  // If no filters are active, show no items
+  // If no filters are active, show all items
   else if (activeFilters.acts.size === 0 && activeFilters.locations.size === 0) {
-    filteredItems = [];
+    filteredItems = itemsData;
   }
 
   displayItems(filteredItems);
@@ -247,7 +305,7 @@ function clearFilters() {
   // Update Zone buttons state
   updateZoneButtonsState();
   
-  displayItems([]); // Show no items when filters are cleared
+  displayItems(itemsData); // Show all items when filters are cleared
 }
 
 // Function to parse drop chance and return a numeric value for sorting
@@ -335,10 +393,10 @@ function getDropChanceColor(dropChance) {
 }
 
 // Function to initialize the page
-function initializePage() {
-  createActButtons();
-  createLocationButtons();
-  createZoneButtons();
+async function initializePage() {
+  await createActButtons();
+  await createZoneButtons();
+  await createBossButtons();
   
   // Add Clear Filters button event listener
   const clearButton = document.getElementById('clear-filters');
@@ -346,13 +404,13 @@ function initializePage() {
     clearButton.addEventListener('click', clearFilters);
   }
   
-  displayItems([]); // Initially show no items
+  displayItems(itemsData); // Initially show items
 }
 
 // Call the loadItemsData function when the page loads
 window.onload = loadItemsData;
 
-// Add event listener for clear filters button
+// Update the event listener for clear filters button
 document.getElementById('clear-filters').addEventListener('click', () => {
   // Clear all active states
   document.querySelectorAll('button.active').forEach(button => {
@@ -369,8 +427,8 @@ document.getElementById('clear-filters').addEventListener('click', () => {
     button.disabled = true;
   });
   
-  // Update display
-  displayItems([]);
+  // Update display to show all items
+  displayItems(itemsData);
 });
 
 // Update the updateDisplay function to handle z-index
@@ -424,3 +482,169 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// Search functionality
+let searchTimeout;
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+
+searchInput.addEventListener('input', function() {
+    clearTimeout(searchTimeout);
+    const searchTerm = this.value.toLowerCase().trim();
+    
+    if (searchTerm.length < 2) {
+        searchResults.style.display = 'none';
+        return;
+    }
+
+    searchTimeout = setTimeout(() => {
+        const matchingItems = itemsData.filter(item => 
+            item['Item Name'].toLowerCase().includes(searchTerm) ||
+            item['Item Category'].toLowerCase().includes(searchTerm)
+        ).slice(0, 10); // Limit to 10 results
+
+        if (matchingItems.length > 0) {
+            searchResults.innerHTML = matchingItems.map(item => `
+                <div class="search-result-item" data-item-name="${item['Item Name']}">
+                    <div>${item['Item Name']}</div>
+                    <small>${item['Item Category']}</small>
+                </div>
+            `).join('');
+            searchResults.style.display = 'block';
+        } else {
+            searchResults.style.display = 'none';
+        }
+    }, 300); // Debounce search for 300ms
+});
+
+// Handle search result selection
+searchResults.addEventListener('click', function(e) {
+    const resultItem = e.target.closest('.search-result-item');
+    if (resultItem) {
+        const itemName = resultItem.dataset.itemName;
+        searchInput.value = itemName;
+        searchResults.style.display = 'none';
+        
+        // Find and display the selected item
+        const selectedItem = itemsData.find(item => item['Item Name'] === itemName);
+        if (selectedItem) {
+            displayItems([selectedItem]);
+        }
+    }
+});
+
+// Close search results when clicking outside
+document.addEventListener('click', function(e) {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+    }
+});
+
+function displaySearchedItem(item) {
+  // Clear all filters
+  clearFilters();
+  
+  // Create a detailed item card
+  const itemCard = document.createElement('div');
+  itemCard.className = 'item-card searched-item';
+  
+  // Format locations string
+  const locations = item.Locations.map(loc => 
+    `${loc.Act} ${loc.Zone}${loc.Boss ? ` - ${loc.Boss}` : ''}`
+  ).join(', ');
+  
+  itemCard.innerHTML = `
+    <div class="searched-item-header">
+      <h3>${item['Item Name']}</h3>
+      <div class="searched-item-category">${item['Item Category']}</div>
+    </div>
+    <div class="searched-item-content">
+      <div class="searched-drop-chance" style="color: ${getDropChanceColor(item['Drop Chance'])}">
+        Drop Chance: ${item['Drop Chance']}
+      </div>
+      <div class="searched-locations">
+        <strong>Found in:</strong> ${locations}
+      </div>
+    </div>
+  `;
+  
+  const itemsContainer = document.getElementById('items-container');
+  itemsContainer.innerHTML = '';
+  itemsContainer.appendChild(itemCard);
+}
+
+// Add styles for searched items
+const searchStyles = document.createElement('style');
+searchStyles.textContent = `
+  .searched-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .searched-item-header {
+    margin-bottom: 15px;
+  }
+
+  .searched-item-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  .searched-item-category {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+
+  .searched-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .searched-drop-chance {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .searched-locations {
+    color: #e0e0e0;
+    line-height: 1.4;
+  }
+
+  .searched-locations strong {
+    color: #fff;
+  }
+`;
+document.head.appendChild(searchStyles);
+
+async function loadBossCategories() {
+  const response = await fetch('boss_categories.json');
+  return await response.json();
+}
+
+function createFilterButton(boss, type) {
+  const button = document.createElement('button');
+  button.textContent = boss;
+  button.dataset.filter = boss;
+  button.addEventListener('click', () => toggleLocationFilter(boss, button));
+  return button;
+}
+
+// Update the initialization code
+document.addEventListener('DOMContentLoaded', async () => {
+  itemsData = await loadItemsData();
+  await createActButtons();
+  await createZoneButtons();
+  await createBossButtons(); // Changed to async
+  displayItems(itemsData);
+
+  // ... rest of existing initialization code ...
+});

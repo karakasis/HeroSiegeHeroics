@@ -1,0 +1,30 @@
+{
+  "act_bosses": [
+    "Gurag",
+    "Grim Reaper",
+    "Anubis",
+    "Damien",
+    "Karp King",
+    "Satan",
+    "Mevius"
+  ],
+  "uber_bosses": [
+    "Uber Damien",
+    "Uber Reaper"
+  ],
+  "endgame_bosses": [
+    "King Rakhul",
+    "Sung Lee",
+    "Grimbone",
+    "Possessed Luna"
+  ],
+  "pinnacle_bosses": [
+    "Amun Ra",
+    "Uber Gabriel"
+  ],
+  "global_drops": [
+    "Anywhere",
+    "Dungeons",
+    "Boss Dungeons"
+  ]
+} 

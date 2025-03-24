@@ -5,11 +5,39 @@ body {
   background-color: #1a1a1a;
   color: #e0e0e0;
   min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  margin: 20px auto;
+  z-index: 1001;
+  padding: 0 20px;
+  background-color: #1a1a1a;
+}
+
+/* Add a full-width background behind the search container */
+.search-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* Match the margin-top of other elements */
+  background-color: #1a1a1a;
+  z-index: -1;
 }
 
 .container {
   display: flex;
   min-height: 100vh;
+  margin-top: 80px; /* Add space for fixed search bar */
 }
 
 .filters-column {
@@ -18,11 +46,20 @@ body {
   padding: 20px;
   border-right: 1px solid #3d3d3d;
   position: fixed;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 1002; /* Increased to be above search bar background */
   display: flex;
   flex-direction: column;
+  top: 0; /* Start from the very top */
+}
+
+.filters-column h2 {
+  margin-top: 74px; /* Add space for search bar */
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .content-column {
@@ -31,17 +68,36 @@ body {
   margin-left: 300px;
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  margin-top: 80px; /* Add space for fixed search bar */
 }
 
-h1 {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-weight: 600;
-  text-align: center;
+.content-column h1 {
+  position: fixed;
+  top: 80px; /* Position below search bar */
+  right: 20px;
+  left: 320px; /* Account for filters column width */
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  margin: 0;
+  z-index: 1000; /* Increased z-index */
+  border-bottom: 1px solid #3d3d3d;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Add a pseudo-element behind the header for a solid background */
+.content-column h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1a1a;
+  z-index: -1;
 }
 
 h2 {
@@ -76,27 +132,9 @@ h3 {
   border-bottom: 1px solid #3d3d3d;
 }
 
-/* Add extra spacing between zones and bosses */
-#location-buttons.filter-container {
-  margin-top: 40px;
-  position: relative;
-}
-
-/* Add decorative divider between zones and bosses */
-#location-buttons.filter-container::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #3d3d3d, transparent);
-}
-
 /* Add extra spacing between acts and zones */
 #zone-buttons.filter-container {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .special-zones {
@@ -125,12 +163,17 @@ h3 {
   margin: 0;
   padding: 4px 6px;
   font-size: 11px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
   min-width: 0;
-  height: 24px;
-  line-height: 1;
+  height: auto;
+  min-height: 24px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Style for special zone buttons */
@@ -186,7 +229,7 @@ h3 {
 
 /* Style for the clear filters button container */
 #clear-filters {
-  margin-top: auto; /* Push to bottom */
+  margin-top: auto;
   margin-bottom: 40px; /* Increased bottom margin */
   width: calc(100% - 30px);
   padding: 8px 16px;
@@ -201,6 +244,8 @@ h3 {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: sticky;
+  bottom: 0;
 }
 
 #clear-filters:hover {
@@ -263,6 +308,8 @@ button:disabled:hover {
   align-content: start;
   min-height: 0;
   margin-left: 20px;
+  margin-top: 60px; /* Add space for fixed header */
+  z-index: 1; /* Lower z-index for items */
 }
 
 .item-card {
@@ -278,6 +325,7 @@ button:disabled:hover {
   flex-direction: column;
   transition: all 0.3s ease;
   margin-left: 10px;
+  z-index: 1; /* Ensure items stay below header */
 }
 
 .item-card:hover {
@@ -339,14 +387,198 @@ button:disabled:hover {
   }
 
   .filters-column {
-    width: 100%;
     position: static;
     height: auto;
+    width: 100%;
     border-right: none;
     border-bottom: 1px solid #3d3d3d;
+  }
+
+  .filters-column h2 {
+    margin-top: 20px;
   }
 
   .content-column {
     margin-left: 0;
   }
+
+  .content-column h1 {
+    left: 20px;
+    right: 20px;
+  }
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+
+#search-input:focus {
+  border-color: #45a049;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  right: 20px;
+  background-color: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1002;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #3d3d3d;
+}
+
+.search-result-item div {
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.search-result-item small {
+  color: #888;
+}
+
+#location-buttons .button-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Display 2 buttons per row */
+  gap: 4px; /* Reduced from 8px */
+  padding: 0;
+}
+
+#location-buttons .button-group br {
+  content: '';
+  display: block;
+  margin: 1px 0; /* Reduced from 4px to 1px */
+  grid-column: 1 / -1; /* Make the br span all columns */
+}
+
+#location-buttons .button-group button {
+  background-color: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  color: #e0e0e0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: normal;
+  height: auto;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+#location-buttons .button-group button:hover {
+  background-color: #3d3d3d;
+  border-color: #4d4d4d;
+}
+
+#location-buttons .button-group button.active {
+  background-color: #4CAF50;
+  border-color: #45a049;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+  #location-buttons .button-group {
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row on larger screens */
+  }
+  
+  #location-buttons .button-group button {
+    font-size: 11px; /* Slightly larger font on bigger screens */
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #location-buttons .button-group {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+
+#location-buttons .button-group button.global-drop {
+  background-color: #1a472a; /* Dark green background */
+  border-color: #2d5a3d;
+}
+
+#location-buttons .button-group button.global-drop:hover {
+  background-color: #2d5a3d;
+  border-color: #3d6a4d;
+}
+
+#location-buttons .button-group button.global-drop.active {
+  background-color: #2d8a3d;
+  border-color: #3d9a4d;
+}
+
+#location-buttons .filter-container {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  border-top: 2px solid #3d3d3d;
+  position: relative;
+}
+
+#location-buttons .filter-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3d3d3d, transparent);
+}
+
+#location-buttons .filter-container h3 {
+  color: #e0e0e0;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0 0 15px 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+#location-buttons .button-group button.global-drop {
+  background-color: #1a472a;
+  border-color: #2d5a3d;
+  margin-top: 5px;
+}
+
+#location-buttons .button-group button.global-drop:hover {
+  background-color: #2d5a3d;
+  border-color: #3d6a4d;
+}
+
+#location-buttons .button-group button.global-drop.active {
+  background-color: #2d8a3d;
+  border-color: #3d9a4d;
 }
