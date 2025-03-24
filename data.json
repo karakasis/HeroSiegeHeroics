@@ -4,28 +4,37 @@
     "Locations": [],
     "Item Category": "Gun",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "9.75:3,287,120",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Damien´s Corrupted Head",
-    "Locations": [],
+    "Locations": ["Uber Reaper (Inferno Difficulty)"],
     "Item Category": "Book",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "N/A",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Grand Arch Wizard´s Mantle",
     "Locations": [],
     "Item Category": "Body Armor",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "9.75:9,725,000",
+    "Item Rarity": "Unholy",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
   },
   {
     "Item Name": "Light Bringer's Mark",
-    "Locations": [],
+    "Locations": ["Act VI Boss Dungeons"],
     "Item Category": "Amulet",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:86,200",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 100
@@ -35,7 +44,7 @@
     "Locations": [],
     "Item Category": "Axe",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:86,850",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 98
@@ -45,17 +54,17 @@
     "Locations": [],
     "Item Category": "Belt",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:87,260",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 98
   },
   {
     "Item Name": "Executioner's Cocoon",
-    "Locations": [],
+    "Locations": ["Act III Zone 1", "Act III Zone 2", "Act III Zone 3", "Act III Dungeons"],
     "Item Category": "Body Armor",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:86,450",
     "Item Rarity": "Heroic",
     "Item Tier": "SS",
     "Item Level Requirement": 92
@@ -65,14 +74,14 @@
     "Locations": [],
     "Item Category": "Body Armor",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:96,450",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 85
   },
   {
     "Item Name": "Gabriel's Broken Wings",
-    "Locations": [],
+    "Locations": ["Gabriel (Inferno Difficulty)"],
     "Item Category": "Body Armor",
     "Image": "",
     "Drop Chance": "N/A",
@@ -82,10 +91,10 @@
   },
   {
     "Item Name": "Gem King's Garb",
-    "Locations": [],
+    "Locations": ["Act I Zone 1", "Act I Zone 2", "Act I Zone 3", "Act I Zone 4", "Act I Zone 5"],
     "Item Category": "Body Armor",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:82,500",
     "Item Rarity": "Heroic",
     "Item Tier": "SS",
     "Item Level Requirement": 74
@@ -95,24 +104,34 @@
     "Locations": [],
     "Item Category": "Body Armor",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:38,250",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 84
+  },
+  {
+    "Item Name": "Leviathan's Carcass",
+    "Locations": [],
+    "Item Category": "Body Armor",
+    "Image": "",
+    "Drop Chance": "9.75:218,450",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 74
   },
   {
     "Item Name": "Marcher's of Hatred",
     "Locations": [],
     "Item Category": "Boots",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:1,166,000",
     "Item Rarity": "Unholy",
     "Item Tier": "SS",
     "Item Level Requirement": 100
   },
   {
     "Item Name": "Eternity",
-    "Locations": [],
+    "Locations": ["Amun Ra"],
     "Item Category": "Bow",
     "Image": "",
     "Drop Chance": "N/A",
@@ -125,24 +144,47 @@
     "Locations": [],
     "Item Category": "Charm",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9:72,500",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 92
+  },
+  {
+    "Item Name": "Bag of Unknown Riches",
+    "Locations": [],
+    "Item Category": "Charm",
+    "Image": "",
+    "Drop Chance": "9.75:712,450",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 100
+  },
+  {
+    "Item Name": "Viking's Glyphed Rune",
+    "Locations": [],
+    "Item Category": "Charm",
+    "Image": "",
+    "Drop Chance": "9.75:142,150",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 80
   },
   {
     "Item Name": "Aimbot.exe",
     "Locations": [],
     "Item Category": "Charm",
     "Image": "",
-    "Drop Chance": "N/A"
+    "Drop Chance": "9:75:1,850,000",
+    "Item Rarity": "Satanic",
+    "Item Tier": "SS",
+    "Item Level Requirement": 1
   },
   {
     "Item Name": "Sassy's Dislocated Foot",
     "Locations": [],
     "Item Category": "Charm",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:175,500",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 100
@@ -152,14 +194,14 @@
     "Locations": [],
     "Item Category": "Claw",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9:75:136,725",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 72
   },
   {
     "Item Name": "Eternal Death",
-    "Locations": [],
+    "Locations": ["Amun Ra"],
     "Item Category": "Helmet",
     "Image": "",
     "Drop Chance": "N/A",
@@ -169,7 +211,7 @@
   },
   {
     "Item Name": "Gabriel's Dauntless Vision",
-    "Locations": [],
+    "Locations": ["Gabriel"],
     "Item Category": "Helmet",
     "Image": "",
     "Drop Chance": "N/A",
@@ -182,14 +224,14 @@
     "Locations": [],
     "Item Category": "Mace",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:479,120",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 94
   },
   {
     "Item Name": "Sung Lee's Flask of Carnage",
-    "Locations": [],
+    "Locations": ["Sung Lee"],
     "Item Category": "Potion",
     "Image": "",
     "Drop Chance": "N/A",
@@ -202,14 +244,14 @@
     "Locations": [],
     "Item Category": "Potion",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:342,228",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 100
   },
   {
     "Item Name": "Gabriel's Unholy Oath",
-    "Locations": [],
+    "Locations": ["Gabriel"],
     "Item Category": "Shield",
     "Image": "",
     "Drop Chance": "N/A",
@@ -219,7 +261,7 @@
   },
   {
     "Item Name": "Crow's Whisper",
-    "Locations": [],
+    "Locations": ["Amun Ra"],
     "Item Category": "Staff",
     "Image": "",
     "Drop Chance": "N/A",
@@ -232,14 +274,14 @@
     "Locations": [],
     "Item Category": "Staff",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:1,248,550",
     "Item Rarity": "Unholy",
     "Item Tier": "SS",
     "Item Level Requirement": 88
   },
   {
     "Item Name": "Blood Moon Crescent",
-    "Locations": [],
+    "Locations": ["Amun Ra"],
     "Item Category": "Sword",
     "Image": "",
     "Drop Chance": "N/A",
@@ -249,7 +291,7 @@
   },
   {
     "Item Name": "Gabriel's Broken Resolve",
-    "Locations": [],
+    "Locations": ["Gabriel"],
     "Item Category": "Sword",
     "Image": "",
     "Drop Chance": "N/A",
@@ -262,7 +304,7 @@
     "Locations": [],
     "Item Category": "Sword",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:88,755",
     "Item Rarity": "Satanic",
     "Item Tier": "SS",
     "Item Level Requirement": 94
@@ -272,14 +314,14 @@
     "Locations": [],
     "Item Category": "Sword",
     "Image": "",
-    "Drop Chance": "N/A",
+    "Drop Chance": "9.75:1,287,155",
     "Item Rarity": "Unholy",
     "Item Tier": "SS",
     "Item Level Requirement": 100
   },
   {
     "Item Name": "The Hope Ender",
-    "Locations": [],
+    "Locations": ["Gabriel (Inferno Difficulty)"],
     "Item Category": "Sword",
     "Image": "",
     "Drop Chance": "N/A",
